@@ -9,6 +9,12 @@ const nextConfig = {
         port: '',
         pathname: '/t/p/**', // The path pattern for your image URLs
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.nflxext.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }
