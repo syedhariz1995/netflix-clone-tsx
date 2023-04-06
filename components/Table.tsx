@@ -1,31 +1,30 @@
-import { CheckIcon } from "@heroicons/react/solid"
-import { Product } from "@stripe/firestore-stripe-payments"
+import { CheckIcon } from '@heroicons/react/outline'
+import { Product } from '@stripe/firestore-stripe-payments'
 
-interface Props{
-    products: Product[]
-    selectedPlan: Product | null
+interface Props {
+  products: Product[]
+  selectedPlan: Product | null
 }
 
-function Table({products, selectedPlan}:Props) {
+function Table({ products, selectedPlan }: Props) {
   return (
     <table>
       <tbody className="divide-y divide-[gray]">
         <tr className="tableRow">
-            <td className="tableDataTitle">Montly Price</td>
-            {products.map((product) => (
-                <td
-                className={`tableDataFeature ${
-                  selectedPlan?.id === product.id
-                    ? 'text-[#E50914]'
-                    : 'text-[gray]'
-                }`}
-                key={product.id}
-              >
-                RM {product.prices[0].unit_amount! / 100}
-              </td>
-            ))}
+          <td className="tableDataTitle">Monthly price</td>
+          {products.map((product) => (
+            <td
+              className={`tableDataFeature ${
+                selectedPlan?.id === product.id
+                  ? 'text-[#E50914]'
+                  : 'text-[gray]'
+              }`}
+              key={product.id}
+            >
+              AED{product.prices[0].unit_amount! / 100}
+            </td>
+          ))}
         </tr>
-
         <tr className="tableRow">
           <td className="tableDataTitle">Video quality</td>
           {products.map((product) => (
@@ -41,7 +40,6 @@ function Table({products, selectedPlan}:Props) {
             </td>
           ))}
         </tr>
-
         <tr className="tableRow">
           <td className="tableDataTitle">Resolution</td>
           {products.map((product) => (
@@ -57,7 +55,6 @@ function Table({products, selectedPlan}:Props) {
             </td>
           ))}
         </tr>
-
         <tr className="tableRow">
           <td className="tableDataTitle">
             Watch on your TV, computer, mobile phone and tablet
