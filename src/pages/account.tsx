@@ -42,8 +42,6 @@ function Account({ products }: Props) {
             src="https://rb.gy/g1pwyx"
             alt=""
             className="cursor-pointer rounded"
-            width={30}
-            height={30}
           />
         </Link>
       </header>
