@@ -8,6 +8,7 @@ import useSubscription from '../../hooks/useSubscription'
 import useAuth from '../../hooks/useAuth'
 import Membership from '../../components/Membership'
 import payments, { goToBillingPortal } from '../../lib/stripe'
+import Image from 'next/image'
 
 interface Props {
   products: Product[]
@@ -30,16 +31,17 @@ function Account({ products }: Props) {
       </Head>
       <header className={`bg-[#141414]`}>
         <Link href="/">
-          <img
-            src="https://rb.gy/ulxxee"
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
             width={120}
             height={120}
             className="cursor-pointer object-contain"
+            alt=''
           />
         </Link>
         <Link href="/account">
-          <img
-            src="https://rb.gy/g1pwyx"
+          <Image
+            src="https://occ-0-1190-2774.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABbme8JMz4rEKFJhtzpOKWFJ_6qX-0y5wwWyYvBhWS0VKFLa289dZ5zvRBggmFVWVPL2AAYE8xevD4jjLZjWumNo.png?r=a41"
             alt=""
             className="cursor-pointer rounded"
           />
@@ -49,7 +51,7 @@ function Account({ products }: Props) {
         <div className="flex flex-col gap-x-4 md:flex-row md:items-center">
           <h1 className="text-3xl md:text-4xl">Account</h1>
           <div className="-ml-0.5 flex items-center gap-x-1.5">
-            <img src="https://rb.gy/4vfk4r" alt="" className="h-7 w-7" />
+            <Image src="https://assets.nflxext.com/ffe/siteui/account/svg/membersince.svg" alt="" className="h-7 w-7" />
             <p className="text-xs font-semibold text-[#555]">
               Member since {subscription?.created}
             </p>
