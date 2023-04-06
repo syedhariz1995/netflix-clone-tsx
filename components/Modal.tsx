@@ -110,7 +110,7 @@ function Modal() {
         `${movie?.title || movie?.original_name} has been added to My List.`,
         {
           duration: 8000,
-          style: toastStyle,
+          style: toastStyle, 
         }
       )
     }
