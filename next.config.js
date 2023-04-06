@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+const withTM = require('next-transpile-modules')([
+  '@stripe/firestore-stripe-payments',
+]);
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -7,7 +11,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'image.tmdb.org',
         port: '',
-        pathname: '/t/p/**', // The path pattern for your image URLs
+        pathname: '/t/p/**', // The path pattern for image URLs
       },
       {
         protocol: 'https',
@@ -19,4 +23,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withTM(nextConfig)
