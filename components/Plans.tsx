@@ -36,7 +36,7 @@ function Plans({products}:Props) {
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+            src="https://rb.gy/ulxxee"
             alt="Netflix"
             width={150}
             height={90}
