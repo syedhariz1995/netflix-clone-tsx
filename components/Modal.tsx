@@ -85,7 +85,7 @@ function Modal() {
         (snapshot) => setMovies(snapshot.docs)
       )
     }
-  }, [db, movie?.id])
+  }, [db, movie?.id,user])
 
   // Check if the movie is already in the user's list
   useEffect(
